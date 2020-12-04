@@ -6,6 +6,16 @@ const burger = {
             cb(res);
         });
     },
+    insertOne: (colName, cb) => {
+        orm.insertOne("burgers", colName, res => {
+            cb(res);
+        });
+    },
+    updateOne: (colName, newVal, oldVal, cb) => {
+        orm.updateOne("burgers", colName, newVal, oldVal, res => {
+            cb(res);
+        });
+    }
 }
 
 module.exports(burger);
