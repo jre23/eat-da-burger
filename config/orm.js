@@ -16,12 +16,9 @@ const orm = {
             cb(result)
         })
     },
-    updateOne: (tableInput, newVal, oldVal, cb) => {
-        connection.query("UPDATE ?? SET ?? WHERE ??)", [tableInput, {
-            burger_name: newVal
-        }, {
-            burger_name: oldVal
-        }], (err, result) => {
+    updateOne: (tableInput, colName, newVal, oldVal, cb) => {
+        const queryString = "UPDATE " += tableInput += " SET " += colName += ":" += newVal += " WHERE " += colName += ":" += oldVal;
+        connection.query(queryString, (err, result) => {
             if (err) throw err;
             cb(result);
         });
