@@ -1,6 +1,3 @@
-const {
-    table
-} = require("console");
 const connection = require("./connection.js");
 
 const orm = {
