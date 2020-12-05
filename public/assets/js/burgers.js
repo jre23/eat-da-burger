@@ -1,5 +1,5 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
-$(() => {
+$(document).ready(() => {
     $(".devour").on("click", event => {
         let id = event.target.getAttribute("data-id");
         let newDevouredState = {
@@ -35,4 +35,11 @@ $(() => {
             }
         );
     });
+    // this handler is so the user can press enter instead of just clicking the Add Burger button. reference: https://www.geeksforgeeks.org/how-to-submit-a-form-on-enter-button-using-jquery/
+    $(".create-form").keypress(enter => {
+        if (enter.which === 13) {
+            $(".create-form").submit();
+            return false;
+        }
+    })
 });

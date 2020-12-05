@@ -16,7 +16,7 @@
             {{#unless this.devoured}}
             <ul>
                 <li>
-                    <p><span class="label"></span> {{this.id}}: {{this.burger_name}} <button class="devour"
+                    <p><span class="label"></span> {{this.id}}: {{this.burger_name}} <button class="devour ml-1"
                             data-id="{{this.id}}">Devour It!</button></p>
                 </li>
             </ul>
@@ -44,7 +44,6 @@
             <form class="create-form">
                 <div class="form-group">
                     <h4>Burger Name: </h4>
-                    {{!-- <label for="burg"></label> --}}
                     <textarea id="burg" name="burger" rows="2" cols="30"></textarea>
                 </div>
                 <button type="submit">Add Burger</button>
