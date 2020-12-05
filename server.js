@@ -9,7 +9,6 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.json());
-app.use(express.static("public"));
 // handlebars engine
 app.engine("handlebars", exphbs({
     defaultLayout: "main"
