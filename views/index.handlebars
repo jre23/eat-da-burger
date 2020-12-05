@@ -1,21 +1,6 @@
 <img src="/assets/img/burger.png" alt="picture of a delicious cheeseburger">
 <h1>Eat Da Burger!</h1>
 
-<!-- Pass in data from server.js -->
-{{#each burgers}}
-{{#if this.devoured}}
-<h2>Burgers devoured</h2>
-<ul>
-    <li>
-        <p><span class="label"></span> {{this.id}}</p>
-        <p><span class="label"></span> {{this.burger_name}}</p>
-        <p><span class="label"></span> {{this.devoured}}</p>
-        <button data-id="{{this.id}}" class="devour">Devour It!</button>
-    </li>
-</ul>
-{{/if}}
-{{/each}}
-
 <h2>Burgers not devoured</h2>
 {{#each burgers}}
 {{#unless this.devoured}}
@@ -28,6 +13,19 @@
     </li>
 </ul>
 {{/unless}}
+{{/each}}
+
+{{#each burgers}}
+{{#if this.devoured}}
+<h2>Burgers devoured</h2>
+<ul>
+    <li>
+        <p><span class="label"></span> {{this.id}}</p>
+        <p><span class="label"></span> {{this.burger_name}}</p>
+        <p><span class="label"></span> {{this.devoured}}</p>
+    </li>
+</ul>
+{{/if}}
 {{/each}}
 
 <h2>Enter a burger you want to eat then click the "Add Burger" button!</h2>
