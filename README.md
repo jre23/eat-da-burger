@@ -3,7 +3,7 @@
 ## Table of Contents
 
 1. [Description](#Description)
-2. [GitHub Repo, Video Demonstration, and Heroku Deployment](#GitHub-Repo-Video-Demonstration-and-Heroku-Deployment)
+2. [GitHub Repo and Heroku Deployment](#GitHub-Repo-and-Heroku-Deployment)
 3. [Screenshots](#Screenshots)
 4. [Technologies](#Technologies)
 5. [Installation](#Installation)
@@ -14,21 +14,21 @@
 
 The goal for this project was to build an app that takes in user input for burgers and shows which have been devoured and which have yet to be devoured. The app follows the Model-View-Controller (MVC) software design pattern. 
 
-## GitHub Repo, Video Demonstration, and Heroku Deployment
+## GitHub Repo and Heroku Deployment
 
 [GitHub repo](https://github.com/jre23/eat-da-burger)
 
-[Heroku Deployment](https://peaceful-spire-85964.herokuapp.com/)
+[Heroku Deployment]()
 
 ## Screenshots
 
-![eat da burger screenshot 1]()
+![eat da burger screenshot 1](https://user-images.githubusercontent.com/69170823/101267805-eae85b00-3711-11eb-9b71-eaceac74609a.png)
 
-![eat da burger screenshot 2]()
+![eat da burger screenshot 2](https://user-images.githubusercontent.com/69170823/101267821-0b181a00-3712-11eb-8cf1-21bc33dcd720.png)
 
-![eat da burger screenshot 3]()
+![eat da burger screenshot 3](https://user-images.githubusercontent.com/69170823/101267848-55010000-3712-11eb-8f3e-5992cab76355.png)
 
-![eat da burger screenshot 4]()
+![eat da burger screenshot 4](https://user-images.githubusercontent.com/69170823/101267868-7530bf00-3712-11eb-8d6d-b7e28d0857e9.png)
 
 ## Technologies
 
