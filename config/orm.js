@@ -16,7 +16,7 @@ const orm = {
         })
     },
     updateOne: (tableInput, colName, newVal, colName2, identifier, cb) => {
-        const queryString = "UPDATE ?? SET ??=?? WHERE ??=??";
+        const queryString = "UPDATE ?? SET ??=? WHERE ??=?";
         connection.query(queryString, [tableInput, colName, newVal, colName2, identifier], (err, result) => {
             if (err) throw err;
             cb(result);

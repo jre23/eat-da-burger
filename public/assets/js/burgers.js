@@ -1,20 +1,17 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(() => {
-    $(".devour").on("click", () => {
-        let id = $(this).data("id");
+    $(".devour").on("click", event => {
+        let id = event.target.getAttribute("data-id");
         let newDevouredState = {
             devoured: 1
         };
         console.log(id);
-        console.log(newDevouredState);
-
         // Send the PUT request.
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newDevouredState
         }).then(
             () => {
-                console.log("changed burger boolean to ", devoured);
                 // Reload the page to get the updated list
                 location.reload();
             }
