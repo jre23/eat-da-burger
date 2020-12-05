@@ -8,6 +8,8 @@ router.get("/", (req, res) => {
         res.render("index", {
             burgers: data
         });
+        console.log(data);
+        console.log("test data from get route");
     })
 
 
@@ -25,4 +27,4 @@ router.put("/api/burgers/:id", (req, res) => {
 
 });
 
-module.exports(router);
+module.exports = router;
