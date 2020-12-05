@@ -52,7 +52,7 @@ $(document).ready(() => {
         let newString = "";
         for (let i = 0; i < arrayStr.length; i++) {
             capLetter = arrayStr[i][0].toUpperCase();
-            newString += capLetter + arrayStr[i].slice(1, arrayStr[i].length) + " ";
+            newString += capLetter + arrayStr[i].slice(1, arrayStr[i].length).toLowerCase() + " ";
         }
         return newString.trim();
     }
