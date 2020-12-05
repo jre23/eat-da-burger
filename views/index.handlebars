@@ -1,32 +1,26 @@
 <img src="/assets/img/burger.png" alt="picture of a delicious cheeseburger">
 <h1>Eat Da Burger!</h1>
 
-{{#unless burgers.devoured}}
 <h2>Burgers not devoured</h2>
-{{/unless}}
 
 {{#each burgers}}
 {{#unless this.devoured}}
 <ul>
     <li>
-        <p><span class="label"></span> {{this.id}}</p>
-        <p><span class="label"></span> {{this.burger_name}}</p>
-        <button class="devour" data-id="{{this.id}}">Devour It!</button>
+        <p><span class="label"></span> {{this.id}}: {{this.burger_name}} <button class="devour"
+                data-id="{{this.id}}">Devour It!</button></p>
     </li>
 </ul>
 {{/unless}}
 {{/each}}
 
-{{#if burgers.devoured}}
 <h2>Burgers devoured</h2>
-{{/if}}
 
 {{#each burgers}}
 {{#if this.devoured}}
 <ul>
     <li>
-        <p><span class="label"></span> {{this.id}}</p>
-        <p><span class="label"></span> {{this.burger_name}}</p>
+        <p><span class="label"></span> {{this.id}}: {{this.burger_name}}
     </li>
 </ul>
 {{/if}}
@@ -36,8 +30,10 @@
 
 <form class="create-form">
     <div class="form-group">
-        <label for="burg">Burger Name:</label>
-        <textarea id="burg" name="burger" rows="8" cols="40"></textarea>
+        <h3>Burger Name: </h3>
+        {{!-- <label for="burg"></label> --}}
+        <textarea id="burg" name="burger" rows="4" cols="40"></textarea>
     </div>
+    </br>
     <button type="submit">Add Burger</button>
 </form>
