@@ -1,5 +1,6 @@
+// require dependencies
 const connection = require("./connection.js");
-
+// this creates the orm object that holds the functions that query the mysql database
 const orm = {
     selectAll: (tableInput, cb) => {
         const queryString = "SELECT * FROM ??";

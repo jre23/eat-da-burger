@@ -1,3 +1,4 @@
+// require dependencies
 const mysql = require("mysql");
 // create connection variable 
 const connection = mysql.createConnection({
@@ -7,7 +8,7 @@ const connection = mysql.createConnection({
     password: "password",
     database: "burgers_db"
 });
-// create the connection
+// create the connection with mysql
 connection.connect(err => {
     if (err) {
         console.error("error connecting: " + err.stack);

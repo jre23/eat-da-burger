@@ -1,5 +1,5 @@
 <main class="container">
-
+    {{!-- bootstrap row/col structure --}}
     <div class="row">
         <div class="col-12 text-center">
             <h1>Eat Da Burger!</h1>
@@ -10,8 +10,9 @@
     <div class="row">
         <div class="col-6">
             <h2>Not Devoured</h2>
-
+            {{!-- loop through burgers object --}}
             {{#each burgers}}
+            {{!-- check if the burger has been devoured --}}
             {{#unless this.devoured}}
             <ul>
                 <li>
@@ -35,7 +36,6 @@
             {{/each}}
         </div>
     </div>
-
     <div class="row">
         <div class="col-12 text-center">
             </br>
@@ -49,5 +49,4 @@
             </br>
         </div>
     </div>
-
 </main>
