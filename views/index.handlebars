@@ -1,7 +1,10 @@
 <img src="/assets/img/burger.png" alt="picture of a delicious cheeseburger">
 <h1>Eat Da Burger!</h1>
 
+{{#unless burgers.devoured}}
 <h2>Burgers not devoured</h2>
+{{/unless}}
+
 {{#each burgers}}
 {{#unless this.devoured}}
 <ul>
@@ -14,9 +17,12 @@
 {{/unless}}
 {{/each}}
 
+{{#if burgers.devoured}}
+<h2>Burgers devoured</h2>
+{{/if}}
+
 {{#each burgers}}
 {{#if this.devoured}}
-<h2>Burgers devoured</h2>
 <ul>
     <li>
         <p><span class="label"></span> {{this.id}}</p>

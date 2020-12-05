@@ -5,7 +5,6 @@ $(() => {
         let newDevouredState = {
             devoured: 1
         };
-        console.log(id);
         // Send the PUT request.
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
