@@ -35,7 +35,7 @@ $(document).ready(() => {
             }
         );
     });
-    // this handler is so the user can press enter instead of just clicking the Add Burger button. reference: https://www.geeksforgeeks.org/how-to-submit-a-form-on-enter-button-using-jquery/
+    // this handler is so the user can press enter instead of just clicking the Add Burger button. reference: https://stackoverflow.com/questions/699065/submitting-a-form-on-enter-with-jquery
     $(".create-form").keypress(enter => {
         if (enter.which === 13) {
             $(".create-form").submit();
