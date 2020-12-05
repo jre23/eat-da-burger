@@ -5,6 +5,13 @@ const burger = require("../models/burger.js");
 // create routes for get, post, and put
 router.get("/", (req, res) => {
     burger.selectAll(data => {
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].devoured === 1) {
+                data[i].devoured = true;
+            } else {
+                data[i].devoured = false;
+            }
+        }
         res.render("index", {
             burgers: data
         });
