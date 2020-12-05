@@ -9,15 +9,15 @@ const orm = {
         })
     },
     insertOne: (tableInput, colName, newVal, cb) => {
-        const queryString = "INSERT INTO ?? (??) VALUE ??";
+        const queryString = "INSERT INTO ?? (??) VALUES (?)";
         connection.query(queryString, [tableInput, colName, newVal], (err, result) => {
             if (err) throw err;
             cb(result)
         })
     },
-    updateOne: (tableInput, colName, newVal, oldVal, cb) => {
-        const queryString = "UPDATE ?? SET ??:?? WHERE ??:??";
-        connection.query(queryString, [tableInput, colName, newVal, colName, oldVal], (err, result) => {
+    updateOne: (tableInput, colName, newVal, colName2, identifier, cb) => {
+        const queryString = "UPDATE ?? SET ??=?? WHERE ??=??";
+        connection.query(queryString, [tableInput, colName, newVal, colName2, identifier], (err, result) => {
             if (err) throw err;
             cb(result);
         });
